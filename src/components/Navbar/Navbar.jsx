@@ -17,53 +17,29 @@ function Navbar({ data }) {
   const open = Boolean(anchorEl);
   const [activePage, setActivePage] = React.useState("/home");
   const isXsScreen = useMediaQuery((theme) => theme.breakpoints.down("md"));
-  const [backendResponsive, setBackendResponsive] = React.useState(true);
 
-  const navItem = backendResponsive
-    ? [
-        {
-          id: 1,
-          item: "Home",
-          path: "/",
-        },
-        {
-          id: 2,
-          item: "About Us",
-          path: "/",
-        },
-        {
-          id: 3,
-          item: "Testimonials",
-          path: "/",
-        },
-        {
-          id: 4,
-          item: "Notice",
-          path: "/",
-        },
-      ]
-    : [
-        {
-          id: 1,
-          item: "Home",
-          path: "/",
-        },
-        {
-          id: 2,
-          item: "About Us",
-          path: "/",
-        },
-        {
-          id: 3,
-          item: "Testimonials",
-          path: "/",
-        },
-        {
-          id: 4,
-          item: "Notice",
-          path: "/",
-        },
-      ];
+  const navItem = [
+    {
+      id: 1,
+      item: "Home",
+      path: "/home",
+    },
+    {
+      id: 2,
+      item: "About Us",
+      path: "/aboutUs",
+    },
+    {
+      id: 3,
+      item: "Testimonials",
+      path: "/testimonials",
+    },
+    {
+      id: 4,
+      item: "Notice",
+      path: "/notice",
+    },
+  ];
 
   const navigate = useNavigate();
 
@@ -250,7 +226,7 @@ function Navbar({ data }) {
               </Button>
               <Button
                 variant="outlined"
-                onClick={() => navigate("/login")}
+                onClick={() => navigate("/register")}
                 sx={{
                   borderColor: theme.palette.primary.alt,
                   color: "white",
