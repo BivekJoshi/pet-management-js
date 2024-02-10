@@ -31,11 +31,16 @@ function Navbar({ data }) {
     },
     {
       id: 3,
+      item: "Gallery",
+      path: "/gallery",
+    },
+    {
+      id: 4,
       item: "Testimonials",
       path: "/testimonials",
     },
     {
-      id: 4,
+      id: 5,
       item: "Notice",
       path: "/notice",
     },
@@ -69,7 +74,7 @@ function Navbar({ data }) {
     if (data?.userType === "ADMIN") {
       navigate(`/adminProfile`);
     } else if (data?.userType === "STUDENT") {
-      navigate(`/studentProfile`);
+      navigate(`/Profile`);
     } else {
       navigate(`/superAdminProfile`);
     }

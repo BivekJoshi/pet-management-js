@@ -224,6 +224,7 @@ export const themeSettings = () => {
         main: palette.primary[500],
         light: palette.surface[100],
         alt: palette.secondary[900],
+        backgroundCard: palette.primary[300],
       },
     },
   };
