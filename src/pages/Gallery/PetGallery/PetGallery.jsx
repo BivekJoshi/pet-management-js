@@ -75,7 +75,7 @@ const PetGallery = () => {
                 bottom: "-11rem",
                 width: "100%",
                 color: "white",
-                zIndex: "1000",
+                zIndex: "1",
                 height: "19rem",
                 display: "flex",
                 flexDirection: "row-reverse",
