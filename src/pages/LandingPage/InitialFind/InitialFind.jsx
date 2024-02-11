@@ -37,7 +37,7 @@ const InitialFind = () => {
           <Typography variant="h2">
             <b>FIND YOUR SMART DOG</b>
           </Typography>
-          <Typography variant="h4">
+          <Typography variant="h4" >
             “A dog is the only thing that can make you smile even on the worst
             of days”
           </Typography>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Navbar/Footer/footer";
 
 const AppLayout = () => {
   return (
@@ -10,6 +11,9 @@ const AppLayout = () => {
       </div>
       <div style={{ position: "relative", marginTop: "64px" }}>
         <Outlet />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
