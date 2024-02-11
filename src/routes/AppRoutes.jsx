@@ -4,6 +4,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import ErrorPage from "../components/Errorboundary/ErrorPage";
 import Loadable from "../components/loader/Loadable";
 import AppLayout from "../components/Layout/AppLayout";
+import PetGallery from "../pages/Gallery/PetGallery/PetGallery";
 
 const LoginPage = Loadable(lazy(() => import("../pages/Auth/LoginPage")));
 const RegisterPage = Loadable(lazy(() => import("../pages/Auth/RegisterPage")));
@@ -34,6 +35,7 @@ const AppRoutes = () => {
 
           <Route path="/home" element={<LandingPage />} />
           <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/gallery" element={<PetGallery />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/notice" element={<Notice />} />
         </Route>
