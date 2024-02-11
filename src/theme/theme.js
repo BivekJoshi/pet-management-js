@@ -224,6 +224,8 @@ export const themeSettings = () => {
         main: palette.primary[500],
         light: palette.surface[100],
         alt: palette.secondary[900],
+        text:palette.secondary[500],
+        background: palette.tertiary[400],
       },
     },
   };

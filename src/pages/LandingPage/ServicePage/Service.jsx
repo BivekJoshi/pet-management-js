@@ -99,7 +99,7 @@ const Service = () => {
         direction="row"
         justifyContent="space-between"
         alignItems="center"
-        
+        textAlign="justify"
       >
         <Grid item xs={12} md={4}>
           <Servicelist

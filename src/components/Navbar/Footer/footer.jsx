@@ -12,7 +12,7 @@ const Footer = () => {
   const theme = useTheme();
   return (
     <div style={{ background: theme.palette.primary.main ,color: "#FFFFFF"}}>
-      <div style={{ padding: "5px" }}>
+      <div style={{ padding: "4px" }}>
         <div
           style={{
             display: "flex",
@@ -61,7 +61,7 @@ const Footer = () => {
             <p>Email: abc@gmail.com</p>
           </div>
           <div>
-            <h4>Address</h4>
+          <Typography varient="h4"> Address</Typography>
             <p>Patan Dhoka, Lalitpur</p>
           </div>
         </div>
@@ -81,11 +81,8 @@ const Footer = () => {
               gap: "15px",
             }}
           >
-        
               <p>Terms and condition</p>
-           
               <p>Privacy Policy</p>
-           
               <p>Site Map</p>
           
           </div>
