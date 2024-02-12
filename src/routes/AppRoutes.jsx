@@ -28,11 +28,11 @@ const AppRoutes = () => {
       {/* <ScrollToTop> */}
       <Routes>
         <Route exact path="*" element={<ErrorPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+
         <Route path="/" element={<AppLayout />}>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-
           <Route path="/home" element={<LandingPage />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/gallery" element={<PetGallery />} />

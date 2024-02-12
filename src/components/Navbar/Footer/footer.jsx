@@ -29,7 +29,7 @@ const Footer = () => {
              
             }}
           >
-            <Typography varient="h4">Customer Service</Typography>
+            <Typography varient="h3">Customer Service</Typography>
 
             <p>Track Order</p>
             <p>Returns and Exchange</p>
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <Typography varient="h4"> Service</Typography>
+            <Typography varient="h3"> Service</Typography>
 
             <p>Training</p>
             <p>Consultation</p>
@@ -48,20 +48,20 @@ const Footer = () => {
             <p>Grooming</p>
           </div>
           <div>
-            <Typography varient="h4"> Corporate</Typography>
+            <Typography varient="h3"> Corporate</Typography>
 
             <p>Careers</p>
             <p>About Us</p>
             <p>Blogs</p>
           </div>
           <div>
-            <Typography varient="h4"> Contact</Typography>
+            <Typography varient="h3"> Contact</Typography>
             <p>+977 9871253656</p>
             <p>Tel: 01-2359440</p>
             <p>Email: abc@gmail.com</p>
           </div>
           <div>
-          <Typography varient="h4"> Address</Typography>
+          <Typography varient="h3"> Address</Typography>
             <p>Patan Dhoka, Lalitpur</p>
           </div>
         </div>
