@@ -9,6 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { Avatar, Box, Container, useMediaQuery, useTheme } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/YejuLogo.png";
+import ResButton from "../ResponsiveComponent/ResButton";
 
 function Navbar({ data }) {
   const theme = useTheme();
@@ -144,11 +145,13 @@ function Navbar({ data }) {
             </Menu>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
+            <div style={{width:"85px"}}>
             <img
               src={Logo}
               alt="Yeju Logo"
               style={{ width: "100%", height: "100%" }}
             />
+            </div>
           </Box>
           <div
             style={{
@@ -215,30 +218,21 @@ function Navbar({ data }) {
             <Box
               style={{
                 display: "flex",
-                gap: "1rem",
+                gap: ".5rem",
                 justifyContent: "flex-end",
               }}
             >
-              <Button
-                variant="contained"
+              <ResButton
                 onClick={() => navigate("/login")}
-                sx={{
-                  backgroundColor: theme.palette.primary.alt,
-                  color: "white",
-                }}
-              >
-                <b>Login</b>
-              </Button>
-              <Button
-                variant="outlined"
+                backgroundColor={theme.palette.primary.alt}
+                content="Login"
+              />
+              <ResButton
                 onClick={() => navigate("/register")}
-                sx={{
-                  borderColor: theme.palette.primary.alt,
-                  color: "white",
-                }}
-              >
-                <b>Register</b>
-              </Button>
+                backgroundColor={theme.palette.primary.alt}
+                content="Register"
+                variant="outlined"
+              />
             </Box>
           </div>
         </Toolbar>
