@@ -225,6 +225,8 @@ export const themeSettings = () => {
         light: palette.surface[100],
         alt: palette.secondary[900],
         backgroundCard: palette.primary[300],
+        text:palette.secondary[500],
+        background: palette.tertiary[400],
       },
     },
   };
