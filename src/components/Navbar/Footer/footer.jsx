@@ -1,4 +1,5 @@
 import React from "react";
+import Grid from '@mui/material/Grid';
 import {
   Avatar,
   Box,
@@ -11,24 +12,19 @@ import {
 const Footer = () => {
   const theme = useTheme();
   return (
-    <div style={{ background: theme.palette.primary.main ,color: "#FFFFFF"}}>
-      <div style={{ padding: "4px" }}>
-        <div
-          style={{
+    <Grid  Container sx={{ background: theme.palette.primary.main ,color: "#FFFFFF"}}>
+      <Grid item xs={12} sm={6} md={3} paddingTop={2}>
+        <Grid
+          sx={{
             display: "flex",
             justifyContent: "space-around",
             flexWrap: "wrap",
             margin: "2rem",
             color: "#FFFFFF",
-           
-            margin: "1rem",
+            margin: "0 1rem ",
           }}
         >
-          <div
-            style={{
-             
-            }}
-          >
+          <Grid  item xs={12} sm={6} md={3} >
             <Typography varient="h3">Customer Service</Typography>
 
             <p>Track Order</p>
@@ -37,47 +33,47 @@ const Footer = () => {
             <p>Find Stores</p>
             <p>Contact Us</p>
             <p>FAQ's </p>
-          </div>
+          </Grid>
 
-          <div>
+          <Grid item xs={12} sm={6} md={3} >
             <Typography varient="h3"> Service</Typography>
 
             <p>Training</p>
             <p>Consultation</p>
             <p>Buy-Sell</p>
             <p>Grooming</p>
-          </div>
-          <div>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} >
             <Typography varient="h3"> Corporate</Typography>
 
             <p>Careers</p>
             <p>About Us</p>
             <p>Blogs</p>
-          </div>
-          <div>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} > 
             <Typography varient="h3"> Contact</Typography>
             <p>+977 9871253656</p>
             <p>Tel: 01-2359440</p>
             <p>Email: abc@gmail.com</p>
-          </div>
-          <div>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} > 
           <Typography varient="h3"> Address</Typography>
             <p>Patan Dhoka, Lalitpur</p>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
         <hr></hr>
 
-        <div
-          style={{
+        <Grid item xs={12} sm={6} md={3} 
+          sx={{
             display: "flex",
+            flexWrap:"wrap",
             justifyContent: "space-between",
             margin:"1rem"
           }}
         >
-          <div
-            style={{
+          <Grid item xs={12} sm={6} md={3} 
+            sx={{
               display: "flex",
-              
               gap: "15px",
             }}
           >
@@ -85,13 +81,13 @@ const Footer = () => {
               <p>Privacy Policy</p>
               <p>Site Map</p>
           
-          </div>
-          <div>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} >
             <p>{new Date().getFullYear()} YEJUS PAW. ALL RIGHTS RESERVED</p>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };
 export default Footer;
