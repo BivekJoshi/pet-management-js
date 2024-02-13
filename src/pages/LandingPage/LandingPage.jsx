@@ -8,7 +8,7 @@ const LandingPage = () => {
     <>
       <InitialFind />
       <Service />
-      {/* <AboutUs/> */}
+      <AboutUs/>
     </>
   );
 };
