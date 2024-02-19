@@ -18,7 +18,6 @@ const Testimonials = () => {
         width: "100%",
         height: "500px",
         backgroundColor: "rgb(253, 247, 222)",
-        width:"100%",
         overflow: "hidden",
         display:'flex',
         alignItems:'center'

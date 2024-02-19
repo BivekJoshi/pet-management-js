@@ -22,7 +22,7 @@ const CarrousselCardUI = ({}) => {
           padding: "0",
           position: "relative",
           [theme.breakpoints.up("sm")]: {
-            width: "15rem",
+            width: "5rem",
             height: "6rem",
           },
           [theme.breakpoints.up("md")]: {
