@@ -21,7 +21,7 @@ const Footer = () => {
             margin: "2rem",
             color: "#FFFFFF",
            
-            margin: "1rem",
+            // margin: "1rem",
           }}
         >
           <div
