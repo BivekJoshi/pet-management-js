@@ -6,10 +6,11 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { Avatar, Box, Container, useMediaQuery, useTheme } from "@mui/material";
+import { Avatar, Badge, Box, Container, useMediaQuery, useTheme } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/YejuLogo.png";
 import ResButton from "../ResponsiveComponent/ResButton";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function Navbar({ data }) {
   const theme = useTheme();
@@ -145,12 +146,12 @@ function Navbar({ data }) {
             </Menu>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
-            <div style={{width:"85px"}}>
-            <img
-              src={Logo}
-              alt="Yeju Logo"
-              style={{ width: "100%", height: "100%" }}
-            />
+            <div style={{ width: "85px" }}>
+              <img
+                src={Logo}
+                alt="Yeju Logo"
+                style={{ width: "100%", height: "100%" }}
+              />
             </div>
           </Box>
           <div
@@ -214,7 +215,11 @@ function Navbar({ data }) {
                 </Typography>
               ))}
             </Box>
-
+            <Button sx={{ color: 'black' }} onClick={() => navigate("wish-list")}>
+              <Badge badgeContent={4} color="secondary">
+                <ShoppingCartIcon />
+              </Badge>
+            </Button>
             <Box
               style={{
                 display: "flex",

@@ -1,17 +1,19 @@
 import { Box, Grid, List, Paper, TextField, Typography } from "@mui/material";
 import React from "react";
 import PetCard from "../../../../../components/Card/PetCard";
+import ProductCard from "../../../../../components/Card/ProductCard";
 
 const LIST = [{ id: 1 }, { id: 2 }, { id: 2 }, { id: 2 }, { id: 2 }, { id: 2 }];
 const PetAnimalGallery = () => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={9}>
-        <div style={{ display: "flex", gap: "17px", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", gap: "5px", flexWrap: "wrap",justifyContent:"center" }}>
           {LIST.map((data, index) => {
             return (
               <div key={index}>
-                <PetCard />
+                {/* <PetCard /> */}
+                <ProductCard/>
               </div>
             );
           })}

@@ -11,16 +11,23 @@ const AboutUs = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         width: "100%",
-         height: "520px",
+        height: "520px",
         backgroundColor: "#FFDED2",
-        display:"flex",
-        flexDirection:"column",
-        alignItems:"center",
-        justifyContent:"center",
-        
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      <div style={{ display: "flex", justifyContent: "center", alignItems:"center",gap: ".8rem",padding:"1rem" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: ".8rem",
+          padding: "1rem",
+        }}
+      >
         <Typography variant="h2" sx={{ color: theme?.palette?.primary?.alt }}>
           <b>Why</b>
         </Typography>{" "}
@@ -28,8 +35,14 @@ const AboutUs = () => {
           <b>Us?</b>
         </Typography>
       </div>
-      <div style={{ display: "flex", justifyContent: "center",alignItems:"center" }}>
-        <Typography varient="h7" sx={{ width: "400px", textAlign: "justify" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Typography variant="h6" sx={{ width: "400px", textAlign: "justify" }}>
           Welcome to the Yejus Paw. Our range of products available are to suit
           dogs of all shapes and sizes-from Terriers to Great Danes and
           everything in between! We have developed our own product ranges and
@@ -39,52 +52,6 @@ const AboutUs = () => {
         </Typography>
       </div>
     </div>
-    // <Grid
-    //   container
-    //   direction="row"
-    //   justifyContent="space-between"
-    //   alignItems="center"
-    //   sx={{
-    //     backgroundImage: `url(${Image})`,
-    //     backgroundSize: "cover",
-    //     backgroundPosition: "center",
-    //     width: "100%",
-    //     height: "500px",
-    //     backgroundColor: "#FFDED2",
-    //   }}
-    // >
-    //   <Box
-    //     sx={{
-    //       display: "flex",
-    //       flexDirection: "column",
-    //       justifyContent: "center",
-    //       alignItems: "center",
-    //     }}
-    //   >
-    //     <div style={{ display: "flex", alignItems: "center" }}>
-    //       <Typography variant="h2" sx={{ color: theme?.palette?.primary?.alt }}>
-    //         <b>Why</b>
-    //       </Typography>{" "}
-    //       <Typography variant="h2">
-    //         <b>Us?</b>
-    //       </Typography>
-    //     </div>
-
-    //     <Box>
-    //       <Typography
-    //         varient="h7"
-    //         sx={{ width: "400px", textAlign: "justify" }}
-    //       >
-    //         Welcome to the Yejus Paw. Our range of products available are to
-    //         suit dogs of all shapes and sizes-from Terriers to Great Danes and
-    //         everything in between! We have developed our own product ranges and
-    //         have hand-picked brands that offer products of the highest quality
-    //         and that all have one thing in common; We’d be happy to feed the
-    //         products to or use them on our own dogs.
-    //       </Typography>
-    //     </Box>
-    //   </Box>
-    // </Grid>
   );
 };
 

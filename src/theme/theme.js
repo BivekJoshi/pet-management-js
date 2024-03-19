@@ -215,7 +215,7 @@ export const themeSettings = () => {
           fontSize: ".6rem",
         },
         h7: {
-          fontSize: ".5rem",
+          fontSize: ".1rem",
         },
       },
     },

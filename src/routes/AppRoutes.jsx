@@ -5,6 +5,7 @@ import ErrorPage from "../components/Errorboundary/ErrorPage";
 import Loadable from "../components/loader/Loadable";
 import AppLayout from "../components/Layout/AppLayout";
 import PetGallery from "../pages/Gallery/PetGallery/PetGallery";
+import Wishlist from "../pages/WishList/Wishlist";
 
 const LoginPage = Loadable(lazy(() => import("../pages/Auth/LoginPage")));
 const RegisterPage = Loadable(lazy(() => import("../pages/Auth/RegisterPage")));
@@ -38,6 +39,7 @@ const AppRoutes = () => {
           <Route path="/gallery" element={<PetGallery />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/notice" element={<Notice />} />
+          <Route path="/wish-list" element={<Wishlist />} />
         </Route>
       </Routes>
       {/* </ScrollToTop> */}
