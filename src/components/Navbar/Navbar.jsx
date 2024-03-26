@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/YejuLogo.png";
 import ResButton from "../ResponsiveComponent/ResButton";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { getCartList } from "../../utility/cookieHelper";
 
 function Navbar({ data }) {
   const theme = useTheme();
@@ -20,6 +21,7 @@ function Navbar({ data }) {
   const [activePage, setActivePage] = React.useState("/home");
   const isXsScreen = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
+  const cartItems = getCartList();
   const navItem = [
     {
       id: 1,
@@ -216,7 +218,7 @@ function Navbar({ data }) {
               ))}
             </Box>
             <Button sx={{ color: 'black' }} onClick={() => navigate("wish-list")}>
-              <Badge badgeContent={4} color="secondary">
+              <Badge badgeContent={cartItems.length} color="secondary">
                 <ShoppingCartIcon />
               </Badge>
             </Button>

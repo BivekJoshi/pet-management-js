@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import Image from "../../assets/Image3.png";
 import { Box, Divider, Paper, Typography, Button } from '@mui/material';
+import { setCartList } from '../../utility/cookieHelper';
 
-const ProductCard = () => {
+const ProductCard = ({ data }) => {
     const [isHovered, setIsHovered] = useState(false);
+
+    const handleAddToCart = () => {
+        setCartList(data);
+    }
 
     return (
         <Box
@@ -30,8 +35,7 @@ const ProductCard = () => {
                 <img src={Image} alt="Image" style={{ width: "100%", height: "100%", borderRadius: "6px" }} />
             </div>
             <Divider />
-            <Typography variant='h7' sx={{ fontWeight: "" }}>Himalaya Healthy Pet Food for
-                Adult (3 KG)</Typography>
+            <Typography variant='h7' sx={{ fontWeight: "" }}>{data?.name}</Typography>
             <Typography variant='h7' sx={{ display: "flex", gap: "5px" }}>
                 <b>Rs.</b>
                 120000
@@ -49,8 +53,9 @@ const ProductCard = () => {
                         backgroundColor: "#FFA500",
                         color: "white",
                         fontWeight: "bold",
-                        fontSize:"10px"
+                        fontSize: "10px"
                     }}
+                    onClick={handleAddToCart}
                 >
                     Add to Cart
                 </Button>

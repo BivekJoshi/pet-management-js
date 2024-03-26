@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material';
+import {  getCartList } from '../../utility/cookieHelper';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -17,19 +18,10 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
       fontSize: 14,
       fontWeight:"bold"
     },
-  }));
+}));
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
+const cartItems = getCartList();
 
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
 const Wishlist = () => {
     return (
         <div style={{ margin: "2rem" }}>
@@ -39,25 +31,23 @@ const Wishlist = () => {
                     <TableHead>
                         <TableRow>
                             <StyledTableCell>Category</StyledTableCell>
-                            <StyledTableCell align="right">Breed</StyledTableCell>
-                            <StyledTableCell align="right"></StyledTableCell>
-                            <StyledTableCell align="right">Price</StyledTableCell>
-                            <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
+                            <StyledTableCell align="right">Calories</StyledTableCell>
+                            <StyledTableCell align="right">Fat</StyledTableCell>
+                            <StyledTableCell align="right">Carbs</StyledTableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {rows.map((row) => (
+                        {cartItems?.map((row, index) => (
                             <TableRow
-                                key={row.name}
+                                key={index}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell component="th" scope="row">
                                     {row.name}
                                 </TableCell>
-                                <TableCell align="right">{row.calories}</TableCell>
-                                <TableCell align="right">{row.fat}</TableCell>
-                                <TableCell align="right">{row.carbs}</TableCell>
-                                <TableCell align="right">{row.protein}</TableCell>
+                                <TableCell align="right">{row.id}</TableCell>
+                                <TableCell align="right">{row.name}</TableCell>
+                                <TableCell align="right">{row.desc}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
